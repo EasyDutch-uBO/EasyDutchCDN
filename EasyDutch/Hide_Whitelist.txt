@@ -1,7 +1,7 @@
 [uBlock Origin]
 ! Title: Hide Whitelist
 ! Description: Whitelist for hidden elements on Dutch websites
-! Last updated: %timestamp%
+! Last updated: Tue, 25 Oct 2022 12:43:27 +0000
 !
 ! 2022-06-22 https://github.com/uBlockOrigin/uAssets/issues/13800
 !#if env_firefox

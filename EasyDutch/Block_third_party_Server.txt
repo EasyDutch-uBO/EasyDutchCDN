@@ -1,7 +1,7 @@
 [uBlock Origin]
 ! Title: Block Third-Party Server
 ! Description: Filters for blocking only general third-party servers on Dutch websites
-! Last updated: %timestamp%
+! Last updated: Tue, 25 Oct 2022 10:02:57 +0000
 !
 ! 2022-10-25
 ! https://nos.nl/teletekst

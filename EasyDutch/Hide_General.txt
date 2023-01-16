@@ -1,7 +1,7 @@
 [uBlock Origin]
 ! Title: Hide General
 ! Description: Filters for hiding general elements on Dutch websites
-! Last updated: %timestamp%
+! Last updated: Tue, 04 Oct 2022 13:47:01 +0000
 !
 ! 2022-10-04
 ! ad.nl,bd.nl,bndestem.nl,destentor.nl,ed.nl,gelderlander.nl,tubantia.nl,pzc.nl
