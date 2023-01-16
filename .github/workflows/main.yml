@@ -2,7 +2,7 @@ name: Update EasyDutch CDN
 
 on:
   schedule:
-    - cron: "43 */6 * * *"
+    - cron: "00 12 * * *"
   workflow_dispatch:
 
 jobs:
@@ -12,17 +12,18 @@ jobs:
     steps:
       - name: Clone EasyDutchCDN
         uses: actions/checkout@v3
-      - name: Copy EasyDutch/filters to uAssetsCDN
+      - name: Copy EasyDutch filters to uAssetsCDN
         run: |
           TMPDIR=$(mktemp -d)
           git clone --depth=1 --single-branch --branch=gh-pages https://github.com/EasyDutch-uBO/EasyDutch.git $TMPDIR
-          cp -v $TMPDIR/filters/*.txt filters/
+          cp $TMPDIR/EasyDutch/*.txt EasyDutch/
+          cp $TMPDIR/EasyDutch.txt EasyDutch/
       - name: Commit changes, if any
         run: |
           if [[ -n $(git diff) ]]; then
             git config user.name "GitHub Actions"
             git config user.email "<>"
-            git add -u filters/
+            git add -u EasyDutch/
             git commit -m "Update all CDN assets"
             git push origin main
           fi
