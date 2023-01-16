@@ -17,7 +17,7 @@ jobs:
           TMPDIR=$(mktemp -d)
           git clone --depth=1 --single-branch --branch=gh-pages https://github.com/EasyDutch-uBO/EasyDutch.git $TMPDIR
           cp $TMPDIR/EasyDutch/*.txt EasyDutch/
-          cp $TMPDIR/EasyDutch.txt
+          cp $TMPDIR/EasyDutch.txt *
       - name: Commit changes, if any
         run: |
           if [[ -n $(git diff) ]]; then
