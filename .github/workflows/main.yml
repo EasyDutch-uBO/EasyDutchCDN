@@ -1,0 +1,28 @@
+name: Update EasyDutch CDN
+
+on:
+  schedule:
+    - cron: "43 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Update EasyDutch CDN
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone EasyDutchCDN
+        uses: actions/checkout@v3
+      - name: Copy EasyDutch/filters to uAssetsCDN
+        run: |
+          TMPDIR=$(mktemp -d)
+          git clone --depth=1 --single-branch --branch=gh-pages https://github.com/EasyDutch-uBO/EasyDutch.git $TMPDIR
+          cp -v $TMPDIR/filters/*.txt filters/
+      - name: Commit changes, if any
+        run: |
+          if [[ -n $(git diff) ]]; then
+            git config user.name "GitHub Actions"
+            git config user.email "<>"
+            git add -u filters/
+            git commit -m "Update all CDN assets"
+            git push origin main
+          fi
