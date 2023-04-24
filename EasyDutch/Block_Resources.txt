@@ -1,8 +1,17 @@
 [uBlock Origin]
 ! Title: Block Resources
 ! Description: Filters to block specific URLs on Dutch websites
-! Last updated: Tue, 28 Mar 2023 17:19:32 +0000
+! Last updated: Mon, 24 Apr 2023 11:42:19 +0000
 !
+! 2023-04-24
+||tussenonstwee.nl/wp-content/uploads/*/tu_banner*$image
+||lustmagazine.nl/mediafiles/*.gif$domain=wraaksex.nl
+||poldersexverhalen.nl/wp-content/uploads/*.gif$image
+||sexmetvrouwen.nl/wp-content/uploads/*.gif$image
+||tiener-sexverhalen.nl/wp-content/*.gif$image
+/wp-content/*banner$image,domain=retaildetail.be|retaildetail.nl
+! 2023-04-24 https://github.com/uBlockOrigin/uAssets/issues/17747
+/banner/*$image,1p,domain=alkmaarsdagblad.nl|almelosdagblad.nl|almeredagblad.nl|amstelveensdagblad.nl|amsterdamsdagblad.nl|arnhemmerdagblad.nl|assensdagblad.nl|bergensdagblad.nl|beverwijkerdagblad.nl|bloemendaalsdagblad.nl|bosschedagblad.nl|bredasdagblad.nl|castricumsdagblad.nl|dagbladdijkenwaard.nl|dagbladeindhoven.nl|dagbladgroningen.nl|dagbladutrecht.nl|denheldersdagblad.nl|deventersdagblad.nl|doetinchemsdagblad.nl|dokkumerdagblad.nl|dordrechtsdagblad.nl|drechterlandsdagblad.nl|drontensdagblad.nl|emmensdagblad.nl|enkhuizerdagblad.nl|enschedesdagblad.nl|gooischdagblad.nl|haagsdagblad.nl|haarlemmerdagblad.nl|haarlemmermeerdagblad.nl|harlingerdagblad.nl|heemskerkerdagblad.nl|heerenveensdagblad.nl|heerhugowaardsdagblad.nl|heerlensdagblad.nl|heilooerdagblad.nl|helmondsdagblad.nl|hilversumsdagblad.nl|hollandskroondagblad.nl|hoornsdagblad.nl|ijmuidensdagblad.nl|jouresdagblad.nl|katwijksdagblad.nl|kennemerdagblad.nl|koggenlandsdagblad.nl|langedijkerdagblad.nl|leeuwarderdagblad.nl|lelystadsdagblad.nl|lemsterdagblad.nl|maastrichterdagblad.nl|medembliksdagblad.nl|middelburgsdagblad.nl|nieuwsuitwestfriesland.nl|nijmeegsedagblad.nl|noordlimburgsdagblad.nl|noordoostpoldersdagblad.nl|noordwijkerdagblad.nl|nunspeetsdagblad.nl|opmeerderdagblad.nl|purmerendsdagblad.nl|rodensdagblad.nl|roermondsdagblad.nl|rotterdammerdagblad.nl|sassenheimsdagblad.nl|schagerdagblad.nl|schermerdagblad.nl|sittardsdagblad.nl|sneekerdagblad.nl|stedebroecsdagblad.nl|texelsdagblad.nl|tielsdagblad.nl|tilburgsdagblad.nl|uitgeesterdagblad.nl|volendamsdagblad.nl|wassenaarsdagblad.nl|waterlandsdagblad.nl|westlandsdagblad.nl|wieringerdagblad.nl|wormersdagblad.nl|zaandamsdagblad.nl|zandvoortsdagblad.nl|zeewoldesdagblad.nl|zwolledagblad.nl
 ! 2023-03-28
 ||pokeren.nl/assets/*banner
 ! 2023-03-16
@@ -21,7 +30,6 @@
 /^https?:\/\/(?:www\.)?webcams?\-?[a-z]+\.nl\/media\/banners2?\//$1p,image
 ! 2022-12-09
 ||dewestkrant.nl/wp-content/uploads/*/*Banner
-||amsterdamsdagblad.nl/banner/
 ||rotterdam-nesselande.nl/*/wp-content/webpc-passthru.php?src=*.gif
 ! 2022-12-08
 /wp-content/uploads/*/Banner$domain=accountancyvanmorgen.nl|salarisvanmorgen.nl
@@ -117,11 +125,9 @@
 ||edelmetaal-info.nl/wp-content/uploads/*/*HollandGold*$image
 ! 2022-06-27
 ||broadcastmagazine.nl/wp-content/uploads/*/SMPhomepagenw2.gif
-||usercontent.one/wp/www.dsdating.nl/wp-content/uploads/2021/11/1436229.gif$image
-||usercontent.one/wp/*/wp-content/uploads/*/*banner$image,domain=bdsmleven.nl|dsdating.nl
+||usercontent.one/wp/*/wp-content/uploads/*/*banner$image,domain=bdsmleven.nl
 ||bdsmleven.nl/wp-content/uploads/*/*banner$image
 ||madmoney.eu/promotools/banners/
-||*.wp.com/www.appletips.nl/wp-content/uploads/Handyman-inCharge6.gif
 ||aafm.nl/cms/wp-content/*/banners/$image
 ||aavisie.nl/cms/wp-content/*/banners/$image
 ! 2022-06-22
@@ -144,7 +150,6 @@
 ||proshop.nl/Images/*Top-Banner$image
 ||zoekhulp.nl/img/bnr-
 ! 2022-04-26
-||wp.com/www.appletips.nl/wp-content/uploads/112-tmobviaplay.png$image,domain=appletips.nl
 ||radioeenhoorn.nl/images/banners$image
 ||kechtube.com^$popunder
 ||nieuwsuitnijmegen.nl/uploads/banners/
@@ -228,14 +233,13 @@
 ! 2022-01-13
 .nl/adurl/$xhr,domain=start-player.npo.nl
 /^https?:\/\/statics\.(?:ad|bd|bndestem|destentor|ed|gelderlander|hln|tubantia|pzc)\.(?:nl|be)\/js\/advertising-[\w]+\.js$/$script
-/^https\:\/\/executive-people\.nl\/media\/[\d]{6}\/[\d]+\.jpg$/$image
 /images/banners/*$image,domain=adodenhaag.nl|deperfecte-sexdate.be|bodemvondstenwereld.nl|dolcevia.com|drentsnieuws.nl|halstadcentraal.nl|lokaleomroepzeewolde.nl|neukengratis.be|neuk-sexcontact.be|niedziela.nl|puurnaturisme.nl|sexdate-xxx.be
 /images/bdsmsexcontact$image,domain=adulttop50.nl|neukadressen.com|sexadvertentiesonline.nl|sexfotodating.nl|zinineensexdate.com
 /img/banners/*.gif$image,1p,domain=18date.net|oproepjesnederland.nl|sex55.net|stout-contact.be|stout-contact.nl|zoekertjesbelgie.be
 /js/popup.js$script,1p,domain=18date.net|oproepjesnederland.nl|sex55.net|shemaledaten.net|zoekertjesbelgie.be
-/voicebericht/assets/images/verdien-geld-met-anoniem-thuiswerk.$image,domain=1on1.nl|beeldbellen.xxx|erowerk.nl|geilegids.nl|privecam.nl|privesexlijn.nl|telefoonsex.xxx|tienersex.nl|videochat.nl
-/voicebericht/assets/images/videochat277x$image,domain=beeldbellen.xxx|erowerk.nl|geilegids.nl|privecam.nl|privesexlijn.nl|telefoonsex.xxx|tienersex.nl|videochat.nl
-/wp-content/uploads/*.gif$image,domain=2sexcontact.nl|alblasserdamsnieuws.nl|bekijkporno.nl|ciaotutti.nl|coc.nl|dorpsklanken.online|edelmetaal-info.nl|ero-meiden.nl|geilverlangen.nl|hete-foto.nl|kechtube.com|lekkerewebcams.nl|motokicx.com|nieuws.xxx|noordkopcentraal.nl|onschuldigemeiden.nl|pornokartel.nl|regionoordkop.nl|rtvpapendrecht.nl|rtvlansingerland.nl|seksmet.nl|sexmeid.nl|shespot.nl|sleutelstad.nl|sproeiendekutjes.nl|thekinkyweb.nl|tiener-sexverhalen.nl|tube.nederlandseporno.nl|tubelight.nl|unitednews.sr|wraaksex.nl
+/voicebericht/assets/images/verdien-geld-met-anoniem-thuiswerk.$image,domain=1on1.nl|beeldbellen.xxx|geilegids.nl|privecam.nl|privesexlijn.nl|telefoonsex.xxx|tienersex.nl|videochat.nl
+/voicebericht/assets/images/videochat277x$image,domain=geilegids.nl|privecam.nl|privesexlijn.nl|telefoonsex.xxx|tienersex.nl
+/wp-content/uploads/*.gif$image,domain=alblasserdamsnieuws.nl|bekijkporno.nl|ciaotutti.nl|edelmetaal-info.nl|geilverlangen.nl|hete-foto.nl|lekkerewebcams.nl|nieuws.xxx|noordkopcentraal.nl|onschuldigemeiden.nl|pornokartel.nl|regionoordkop.nl|rtvlansingerland.nl|seksmet.nl|sexmeid.nl|shespot.nl|sproeiendekutjes.nl|tubelight.nl|unitednews.sr|wraaksex.nl
 /wp-content/uploads/*/*banner$image,domain=alblasserdamsnieuws.nl|baanwacht.nl|baarsclassicrock.nl|biflatie.nl|bol-an.nl|cryptobenelux.com|curacao.nu|decibel.nl|dekrantvantynaarlo.nl|deoudrotterdammer.nl|destreekkrant.nu|dekrantnieuws.nl|dordtcentraal.nl|genemuidenactueel.nl|goedkoopstekeukensduitsland.nl|hoekschnieuws.nl|katholiek.nl|loemedia.nl|luister.nl|maaslandradio.nl|mannennieuws.nl|omroepalmere.nl|oogtv.nl|radiocontinu.nl|railhobby.nl|regionoordkop.nl|simone.nl|sleutelstad.nl|spreekbuis.nl|streamwijzer.be|tradeidee.nl|unitednews.sr
 /wp-content/uploads/*/Mijn-Zaak$image,domain=dekrantvantynaarlo.nl|destreekkrant.nu|dekrantnieuws.nl
 /wp-content/uploads/*/Neuk-test$image,domain=gratispornofilm.nl|outdoor-sex.nl|pornokartel.nl|teen-sex.nl
@@ -251,8 +255,6 @@
 ||abcsuriname.com/templates/abc/assets/gfx/header_banner$image,1p
 ||adodenhaag.nl/fpbanner
 ||agconnect.nl/sites/ag/files/styles/partner_*$image,1p
-||alblasserdamsnieuws.nl/wordpress/wp-content/uploads/*/CJG-Alblasserdam.jpg$image
-||alblasserdamsnieuws.nl/wordpress/wp-content/uploads/*/Rozendaal.jpg$image
 ||amazonaws.com/zkn/files/*.gif$image,domain=zorgkaartnederland.nl
 ||am-forum.nl/upload/logo_elektrodump.png
 ||amz01.plzcdn.com/a/
@@ -374,9 +376,6 @@
 ||htforum.nl/yabbse/banners/
 ||htforum.nl/yabbse/topframe_v3.php
 ||huisvrouwenvoorsex.nl/banner*.gif$image
-||i0.wp.com/www.appletips.nl/wp-content/uploads/incharge$image,domain=appletips.nl
-||i0.wp.com/www.appletips.nl/wp-content/uploads/luvago$image,domain=appletips.nl
-||i2.wp.com/www.appletips.nl/wp-content/uploads/nordvpn$image,domain=appletips.nl
 ||ikwilneuken.*/assets/img/*.gif$image
 ||images.islive.nl/snapshot/*/200x150$image,domain=nederlandsextube.nl
 ||images.islive.nl/snapshot/*/99x84.jpg$image,domain=sexverhalen.com
@@ -495,8 +494,6 @@
 ||relatieplanet.be/2linkbe/iframesearch.asp
 ||reliwiki.nl/images/*banner
 ||resellers.viboshop.nl/promoimages/
-||retaildetail.be/sites/default/files/banner/
-||retaildetail.nl/sites/default/files/banner/
 ||rickfm.nl/cwm/fm/userfiles/banner/
 ||risallah.com/multimedia/images/banners/$image
 ||rtvdordrecht.nl/cwm/fm/userfiles/banner/
