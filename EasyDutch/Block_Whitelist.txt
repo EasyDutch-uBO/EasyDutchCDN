@@ -1,9 +1,14 @@
 [uBlock Origin]
 ! Title: Block Whitelist
 ! Description: Whitelist for specific URLs on Dutch websites
-! Last updated: Wed, 26 Apr 2023 09:18:22 +0000
+! Last updated: Wed, 26 Apr 2023 14:07:29 +0000
 !
 ! 2023-04-26
+@@||prtawe.com/embed/tbplyr/$script,domain=camsexbabe.nl
+@@||pt.ctsdwm.com/tube-player/$subdocument,domain=camsexbabe.nl|sproeiendekutjes.nl
+@@||pt.pctlwm.com/embed/tbplyr/$script,domain=sproeiendekutjes.nl
+@@||pt.ctsdwm.com/api/video-promotion/v1/get-content-url/$xhr,domain=pt.ctsdwm.com
+@@||awemdia.com/*.mp4$media,domain=pt.ctsdwm.com
 @@||truck1.be/_BANNERS_/client/redefiner/
 @@||truck1.nl/_BANNERS_/client/redefiner/
 @@||truck1-nl.be/_BANNERS_/client/redefiner/
@@ -14,11 +19,6 @@
 ! 2023-03-21 https://github.com/uBlockOrigin/uAssets/issues/17233
 @@||cdn.bluebillywig.com/scripts/prebid/$script,domain=geenstijl.nl
 ! 2023-01-14
-@@||awemwh.com/$image,domain=camsexbabe.nl
-@@||potwm.com/tube-player/?$frame,domain=camsexbabe.nl
-@@||potwm.com/api/video-promotion/v1/get-$xhr,domain=camsexbabe.nl|potwm.com
-@@||prtawe.com/embed/tbplyr/?$script,domain=camsexbabe.nl
-@@||coolblue.nl^*/ard.png$script,1p
 @@||2mdn.net/instream/html5/ima3.js$script,domain=geenstijl.nl
 @@||laredoute.com^$image,domain=laredoute.nl|laredoute.lu
 ! 2023-01-12 https://github.com/uBlockOrigin/uAssets/commit/943cc256a43b4aa5c20f2898860279629abd72b2
@@ -30,8 +30,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=weerplaza.nl
 ! 2022-12-08
 @@||salarisvanmorgen.nl/wp-content/uploads/*abonneer-nieuwsbrief
-! 2022-06-29
-@@||pt.pctlwm.com/embed/tbplyr/*$script,domain=sproeiendekutjes.nl
 ! 2022-06-22
 @@||images.2dehands.com/api/v1/listing-twh-p/images/ad/$image,domain=2dehands.be
 ! 2022-03-18
