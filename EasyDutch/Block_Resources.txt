@@ -1,8 +1,31 @@
 [uBlock Origin]
 ! Title: Block Resources
 ! Description: Filters to block specific URLs on Dutch websites
-! Last updated: Mon, 24 Apr 2023 13:50:55 +0000
+! Last updated: Wed, 26 Apr 2023 12:15:39 +0000
 !
+! 2023-04-26
+||klasse.be/wp/wp-content/images/*_lb_*full.*$image
+||wp.com/klokradio.nl/wp-content/uploads/*/adv-
+||knhs.nl/imagegen.ashx?image=/media/*/*banner*&width=550&constrain=true$image
+||knhs.nl/imagegen.ashx?image=/media/*/*banner*&width=360&constrain=true$image
+||oisterwijknieuws.nl/wp-content/uploads/*/50-Plus-Makelaar-*.jpg$image
+||oisterwijknieuws.nl/wp-content/uploads/*/Boogaers-2018-125.png$image
+||oisterwijknieuws.nl/wp-content/uploads/*/MBA-regiobank-*.gif$image
+||oisterwijknieuws.nl/wp-content/uploads/*/ondernemers-oisterwijk.png$image
+||oisterwijknieuws.nl/wp-content/uploads/*/steenwitgoed-270x324-*.jpg$image
+||sedproductions.nl/ads/$image,3p
+||storage.googleapis.com/stateless-www-nuus-be/*/*.gif$image,domain=nuus.be
+||storage.googleapis.com/stateless-www-nuus-be/*/*-banner*$image,domain=nuus.be
+||truck1.be/_BANNERS_/$image
+||truck1.nl/_BANNERS_$image
+||truck1-nl.be/_BANNERS_/$image
+||truck1.be/st2/banners/$subdocument
+||truck1.nl/st2/banners/$subdocument
+||truck1-nl.be/st2/banners/$subdocument
+/wp-content/uploads/*/banner.jpg$image,domain=radiozuidrand.be
+/wp-content/uploads/*/banner_reclame$image,domain=radiozuidrand.be
+/wp-content/uploads/*/banner-sponsors$image,domain=radiozuidrand.be
+||wp.com/cdn.onlineradiobox.com/img/b/$image,domain=radiozuidrand.be
 ! 2023-04-24
 ||alblasserdamsnieuws.nl/wordpress/wp-content/uploads/*week$image
 /images/banners/*$image,domain=bodemvondstenwereld.nl|drentsnieuws.nl|lokaleomroepzeewolde.nl|neukengratis.be|niedziela.nl|puurnaturisme.nl|sexdate-xxx.be
@@ -29,9 +52,6 @@
 ! 2023-02-18
 ||srv69.eu/smartlink/banner/$3p
 ||srv69.eu/b/$image,3p
-/wp-content/uploads/*/banner-sponsors$image,domain=radiozuidrand.be
-/wp-content/uploads/*/banner_reclame$image,domain=radiozuidrand.be
-||i0.wp.com/cdn.onlineradiobox.com/img/b/$image,domain=radiozuidrand.be
 ! 2023-02-02
 ||focusclub.nl/images/banners/
 ! 2023-01-27
@@ -388,10 +408,6 @@
 ||kilroynews.net^*banner
 ||kinkydatingnederland.nl/banner$image
 ||kinkymedia.nl/wp-content/plugins/wp-ad-guru/*$script,1p
-||klasse.be/wp/wp-content/images/*_lb_zondergrenzenvzw.full.$image
-||klokradio.nl/wp-content/uploads/*/adv-
-||knhs.nl/imagegen.ashx?image=/media/1*&width=360&constrain=true$image
-||knhs.nl/imagegen.ashx?image=/media/1*/*banner-*&width=550&constrain=true$image
 ||kookboekennieuws.nl/wp-content/uploads/*/*-banners-*.$image
 ||kranenwebsite.nl/banners/$image
 ||landenweb.nl/imgBoeking/$image
@@ -400,20 +416,15 @@
 ||luister.nl/wp-content/uploads/*/Banner_$image
 ||maaslandradio.nl/wp-content/uploads/*/autodoc.
 ||maaslandradio.nl/wp-content/uploads/*/Hekwerkland.
-||manpedia.nl/wp-content/uploads/*/Maxaro-badkamers-tegels.png
 ||media.biertijd.com/galleries/*/banners/$image,3p
 ||media.prdn.nl/retailtrends/images/thumbnail_bnr-*$domain=retailtrends.nl
 ||media-totaal.nl/*com_adagency*adagencyAds$script,domain=dekrantnieuws.nl|destreekkrant.nu|dekrantvantynaarlo.nl
 ||meerdangewenst.nl^*/sponsors/
-||meidenzoekensex.nl/assets/img/shemaledate$image
 ||metalfan.nl/banners/
 ||midvliet.nl/images/advertenties-$image
-||milfdatingnederland.nl/banner$image
 ||mo.be/sites/default/files/banners/$image
 ||mobqo.nl^*/banner
 ||motocrossplanet.nl/banner/
-||motocrossplanet.nl/banner/
-||motocrossplanet.nl/wwwuploads/banners/
 ||motocrossplanet.nl/wwwuploads/banners/
 ||naaktkrant.nl/media/*/*.gif$image,1p
 ||nederlandsextube.nl/images/amateurwebcams$image
@@ -422,22 +433,8 @@
 ||nederlandsextube.nl/images/webned$image
 ||netonline.be/slices/banners/
 ||nevobo.nl^*/sponsor/
-||newsexcontact.nl/images/milfjesneuken.$image
-||newspower.nu/wp-content/uploads/*/*/*.gif$image
-||nieuwsopbeeld.nl/wp-content/uploads/*/Advertentie-
-||ninefornews.nl/wp-content/a-d-s/*
-||ninefornews.nl/wp-content/plugins/advanced-ads*/public/assets/js/*.js$script,1p
-||ninefornews.nl/wp-content/uploads/*/*-300x250-*.jpg$image
-||ninefornews.nl/wp-content/uploads/*/banner-set-*.png$image
 ||nltube.com/b?z=A*$subdocument
 ||noordhollandsdagblad.nl/nhd/extra/assets/advertising/dfp-setup.js$script,1p
-||notebookcheck.nl/fileadmin/Sonstiges/amaz_$xhr
-||oisterwijknieuws.nl/wp-content/uploads/*/*-banner-*.$image
-||oisterwijknieuws.nl/wp-content/uploads/*/lelieveld-*.jpg$image
-||oisterwijknieuws.nl/wp-content/uploads/*/MBA-regiobank-*.gif$image
-||oisterwijknieuws.nl/wp-content/uploads/*/parelexpres.jpg$image
-||oisterwijknieuws.nl/wp-content/uploads/*/Paul-Kuijpers-*.$image
-||oisterwijknieuws.nl/wp-content/uploads/*/savona-wasstraat-*.jpg$image
 ||omroeprsh.nl/wp-content/uploads/*/*RSH-300x*.gif$image
 ||onderwijsland.com/files/partners/
 ||oneworld.nl/app/uploads/*/*-Banner$image
@@ -446,13 +443,6 @@
 ||openingsurengids.be/includes/js/checkblockv2.js
 ||openingsurengids.be/template/images/publi/
 ||opiniepeilers.nl/media/*/*notiesHR*.jpg$image
-||optimole.com/*/https://www.jammfm.nl/wp-content/uploads/*/adverteren-$image
-||optimole.com/*/https://www.jammfm.nl/wp-content/uploads/*/banner$image
-||optimole.com/*/https://www.jammfm.nl/wp-content/uploads/*/Boeren-van-Amstel.jpg$image
-||optimole.com/*/https://www.jammfm.nl/wp-content/uploads/*/BW_logo_blok_rgb_$image
-||optimole.com/*/https://www.jammfm.nl/wp-content/uploads/*/JammFM*-banner$image
-||optimole.com/*/https://www.jammfm.nl/wp-content/uploads/*/logo1-default_new-$image
-||optimole.com/*/https://www.jammfm.nl/wp-content/uploads/*/Logo-Ridder-RGB_$image
 ||opwindend.net/Promotie*.php?$subdocument
 ||outdoor-sex.nl/wp-content/uploads/*/buitenseks.$image
 ||outdoor-sex.nl/wp-content/uploads/*/Sexindeprovincie-$image
@@ -527,8 +517,6 @@
 ||static.sexcamsites.nl/dsx/voicebericht/assets/images/sexlijnen-saldo-opwaarderen$image
 ||static.sexcamsites.nl/dsx/voicebericht/assets/images/startpaginabnr$image
 ||stepstone.be/*?event=widgettool.$3p
-||storage.googleapis.com/stateless-www-nuus-be/*/*.gif$image,domain=nuus.be
-||storage.googleapis.com/stateless-www-nuus-be/*/*-banner-*$image,domain=nuus.be
 ||swpportal.com/upload/squarebanners/
 ||teen-sex.nl/wp-content/uploads/*/900x250$image
 ||teen-sex.nl/wp-content/uploads/*/SP1600x150.jpg$image
@@ -543,29 +531,16 @@
 ||tradeidee.nl/banners/
 ||transport-online.nl/site/includes/uploads/banner-$image
 ||trivago.nl/nl/srv/destination/js/$domain=popinstituut.nl
-||truck1.be/st2/banners/$subdocument
-||truck1.nl/st2/banners/$subdocument
-||truck1-nl.be/st2/banners/$subdocument
-||turksemedia.nl/logos/*.
 ||tweedehandschristelijkeboeken.nl/wp-content/uploads/*/gratis-eo-visie.png$image
 ||twentefm.nl/directcast/custom/rtvnot/playout/commercials/
-||ucl-voetbal.nl/derden/betcity-$image
+||ucl-voetbal.nl/derden/
 ||uecl-voetbal.nl/derden/
 ||uel-voetbal.nl/derden/
-||unitednews.sr/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension$xhr,1p
-||unitednews.sr/wp-content/uploads/*/*_header$image
 ||unity.nu/media/*/BANNERS/
-||upload.gscdn.nl/uploads/*_widgets_300x300px$image,domain=geenstijl.nl
-||uu.nl/proton/*/akzonobel_masters_
 ||vagina.nl/fish-hooks/fetch.json
 ||vbro.be/wp-content/uploads/*/autoonderdelen24_$image
 ||verkeerplaza.nl/js/banner.js
 ||viapizza.online/?ts_id=$subdocument,domain=dagbladdewest.com
-||video18.nl/img/banners/$image
-||visserijnieuws.nl/images/banners/*$image
-||vitesse.nl/assets/img/layout/etoro-logo.png$image
-||vitesse.nl^*_sponsors_footer.png
-||vives.nl/wp-content/uploads/Banner_*
 ||vlietnieuws.nl/wp-content/plugins/custom-banners/*$script,1p
 ||voetbaluitslagen.com/wp-content/uploads/*/bet*$image
 ||waarzo.nl/imagestore/banners/

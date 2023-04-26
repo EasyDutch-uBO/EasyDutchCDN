@@ -1,8 +1,14 @@
 [uBlock Origin]
 ! Title: Hide Specific
 ! Description: Filters for hiding elements on specific Dutch websites
-! Last updated: Tue, 25 Apr 2023 12:48:09 +0000
+! Last updated: Wed, 26 Apr 2023 09:51:30 +0000
 !
+! 2023-04-26
+sexervaringendelen.nl##iframe[data-src^="https://ads."]
+nuus.be##.adv-link:upward(.sidebar)
+truck1.be,truck1.nl,truck1-nl.be##.banners
+truck1.be,truck1.nl,truck1-nl.be##.splitter-banner
+bierdopje.com##.content-rechts-ad
 ! 2023-04-25
 ecommercenews.nl##.ldrtop
 ecommercenews.nl##.sidebar > .widget-image-content-button:not(:has(a[href*="ecommercenews.nl"]))
@@ -1226,7 +1232,6 @@ culturescope.nl##.widget_sp_image:has([onclick^="javascript:window.open("] > img
 radioreflex.be##.widget_sponsors_widget
 spelersvrouw.nl##.widget_text.gridlove-box
 emerce.nl##.widget_text:has(img[src*="/hosted-by-true-"])
-nuus.be##.widget-area.sidebar:has([data-advadstrackid])
 sportinnederland.com##.widget-area:has([id^="custom_html-"]:has(.adsbygoogle))
 digitaalburg.com##.widget-area-bottom.align-center:has(.adsbygoogle)
 onderwijsland.com##.widgetbar > div.row > :has(.widget-partners)
