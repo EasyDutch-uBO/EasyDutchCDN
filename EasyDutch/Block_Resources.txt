@@ -1,13 +1,26 @@
 [uBlock Origin]
 ! Title: Block Resources
 ! Description: Filters to block specific URLs on Dutch websites
-! Last updated: Thu, 27 Apr 2023 07:19:02 +0000
+! Last updated: Thu, 27 Apr 2023 16:21:48 +0000
 !
 ! 2023-04-27
+||cdn.amateursexstart.nl/wp-content/uploads/*/*.gif$image
+||cdn77.org/*/banners/crimesite/$image,domain=crimesite.nl
 ||dailypic.nl/banners/$image
+||kicxstart.nl/wp-content/uploads/*/*1300x150$image
 ||kinkymedia.nl/wp-content/uploads/kousenenpanties-lingerie*.jpg$image
 ||milfdatingnederland.nl/banner$image
+||motokicx.com/wp-content/uploads/*/Motokicx*.gif$image
+||motorrijder.be/wp-content/uploads/*/*1300x150$image
 ||msa.paginabanner.nl/banners/$image
+||wp.com/noordernieuws.nl/wp-content/uploads/*/*.gif$image,domain=noordernieuws.nl
+||thekinkyweb.nl/wp-content/uploads/*/banner$image
+||thekinkyweb.nl/wp-content/uploads/*/Logo-RedRopes-Erotische-verhale$image
+||vives.nl/wp-content/uploads/*banner$image
+||wp.com/gostreaming.nl/wp-content/uploads/*.gif$image
+||xmissy.nl/skins/_customplayers/*/*overlay$image
+||xmissy.nl/skins/_customplayers/*/*top$image
+||zwartewaterfm.nl/wp-content/uploads/*/SponsorenZwarteWaterFM
 ! 2023-04-26
 ||402automotive.com/files/*/files/images/banners/*.$image,domain=402online.com
 ||autosport.nl/dist/images/Banner$image
@@ -137,7 +150,6 @@
 /^https\:\/\/dutchitchannel\.nl\/media\/\d{6}\/\d{10}\.jpg$/$image
 ||dutchitchannel.nl/6*?field=binary1$image
 ||geile-adressen.nl/images/overspel.gif
-||mygaydate.nl/images/eroshop.jpg
 ||floranews.com/img/banner/Floranews
 ||gigantfm.nl/assets/images/autoonderdelen$image
 ||gigantfm.nl/assets/images/onderdelenshop$image
@@ -163,7 +175,6 @@
 /*/TOTO*banner$domain=fcgroningen.nl|willem-ii.nl
 ||voetbalrotterdam.nl/wp-content/uploads/*/*banner
 ||voetbalrotterdam.nl/wp-content/uploads/*/fidus
-||wp.com/gostreaming.nl/wp-content/uploads/*/*SOCIAL*_SNAP$image
 ! 2022-06-28
 ||linuxmag.nl/wp-content/uploads/*/*Rectangle*$image
 ||linuxmag.nl/wp-content/uploads/*banner
@@ -202,7 +213,6 @@
 ! 2022-05-04
 ||onsoranje.nl/sites/*/images/sponsorlogos/
 ||proshop.nl/Images/*Top-Banner$image
-||zoekhulp.nl/img/bnr-
 ! 2022-04-26
 ||radioeenhoorn.nl/images/banners$image
 ||kechtube.com^$popunder
@@ -256,8 +266,6 @@
 ||startlinken.nl/images/banner-$image,1p
 ||startlinken.nl/javascript/BannerRotation*$script,1p
 ||waarzo.nl/imagestore/site-banners/
-! 2022-02-02
-||webcamsexplaza.com/images/shemaledating.gif
 ! 2022-01-26
 ||tpo.nl/wp-content/themes/*/tpo-banner$image
 ! 2022-01-19
@@ -281,9 +289,6 @@
 ||nexclic.com/pics/image*.gif$domain=dutchleader.nl
 ||mygaydate.nl/banner$image
 ||mygaydate.nl/images/shemales.gif
-||wp.com/romagazine.nl/*/wp-content/uploads/*/*/RO*?zoom=*&w=665
-||wp.com/romagazine.nl/*/wp-content/uploads/*/*.gif*w=665$image
-||wp.com/romagazine.nl/*/wp-content/uploads/*/*.jpg?w=665$image
 ! 2022-01-13
 .nl/adurl/$xhr,domain=start-player.npo.nl
 /^https?:\/\/statics\.(?:ad|bd|bndestem|destentor|ed|gelderlander|hln|tubantia|pzc)\.(?:nl|be)\/js\/advertising-[\w]+\.js$/$script
@@ -534,7 +539,6 @@
 ||wietforum.nl/uploads/monthly_*/*_312x60*.jpg.*.jpg$image
 ||wietforum.nl/uploads/monthly_*/ai_php.gif.*.gif$image
 ||wp.com/amsterdamactueel.nl/wp-content/uploads/*/728x60_
-||wp.com/www.thekinkyweb.nl/wp-content/uploads/*/*Banner$image
 ||xingo.nl/bannermanagement/
 ||xsnews.nl/aff/$image,domain=nzbindex.nl
 ||zilverengoudkopen.nl/banners/
