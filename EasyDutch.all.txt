@@ -4,7 +4,7 @@
     Dutch supplement for the Easylist filters to use with uBlock Origin
     Only for ads or anti-adblock on Dutch sites!
     Does also support Afrikaans, since it is a sort of Dutch
-! Last updated: Mon, 23 Oct 2023 09:57:42 +0000
+! Last updated: Mon, 23 Oct 2023 19:20:04 +0000
 ! Expires: 3 days (update frequency)
 ! Homepage: https://github.com/EasyDutch-uBO/EasyDutch
 ! GitHub issues: https://github.com/EasyDutch-uBO/EasyDutch/issues
@@ -238,7 +238,10 @@ _advertentieleaderboardhome.
 ! Last updated: %timestamp%
 !
 ! 2023-10-23
+||b-cdn.net/w_/*-banner-$image,domain=dtvnieuws.nl|omroephorstaandemaas.nl|omroepvenlo.nl|roulettefm.nl|rtvstichtsevecht.nl|wos.nl
+||ecdn.menselijklichaam.nl/banners/$images
 /production/uploads/partners/*$image,domain=dutchitchannel.nl
+||nieuwrechts.nl/api/advertise-deliver/$xhr,1p
 ! 2023-10-16
 ||rushcommerce.com/banners*$3p
 omroepalmere.nl/wp-content/uploads/*/vacature-noordpool$image,domain=omroepalmere.nl
@@ -760,6 +763,8 @@ omroepalmere.nl/wp-content/uploads/*/vacature-noordpool$image,domain=omroepalmer
 ! Description: Whitelist for specific URLs on Dutch websites
 ! Last updated: %timestamp%
 !
+! 2023-10-23
+@@||vandale.*/*/images/*_300x250.$image,1p
 ! 2023-10-13
 @@||rambla.be/players/video-js/video-js-plugins/videojs.ads.min.js$script,1p
 ! 2023-08-01
@@ -862,6 +867,7 @@ omroepalmere.nl/wp-content/uploads/*/vacature-noordpool$image,domain=omroepalmer
 ! Last updated: %timestamp%
 !
 ! 2023-10-23
+dtvnieuws.nl,omroephorstaandemaas.nl,omroepvenlo.nl,roulettefm.nl,rtvstichtsevecht.nl,wos.nl##span:has-text(advert):upward(div)
 dutchleader.nl##td[background]:has-text(Advert):upward(tbody)
 dutchitchannel.nl##.partners-swiper
 dutchitchannel.nl##a[href][target][onclick*="trackBannerClick"]:not(a[href*="dutchitchannel.nl"]) > img:upward(a)
@@ -1121,9 +1127,6 @@ marktplaats.nl,2dehands.be##div[class*="admarktTitle"]:upward(1)
 ! 2023-04-18
 albrandswaardsdagblad.nl,barendrechtsdagblad.nl,dagblad010.nl,dagblad070.nl,goudsdagblad.nl,ridderkerksdagblad.nl,rijswijksdagblad.nl,voorburgsdagblad.nl,zoetermeersdagblad.nl##.ddbad_wrapper
 freeones.nl##.banner-placeholder
-! 2023-04-14
-##[class^="banner"]
-###adf-autonative
 ! 2023-04-04
 zozwanger.nl##.a-single
 zozwanger.nl##.g-single
@@ -1894,7 +1897,6 @@ eredivisie.nl##.header__top__partners
 arenalokaal.nl,sexverhalen.com##.header_banner
 koopplein.nl,televizier.nl,tvblik.nl##.header-banner
 eromarkt.nl##.headerlinks:has(iframe[src="linkframe.php"])
-wos.nl##.header-right
 weerplaza.nl##.hf-widget
 farm-date.com##.hide-for-small-only:has-text(Sponsors)
 slam.nl##.holder-ads
@@ -1962,7 +1964,6 @@ janvissersweer.nl##.post:has-text(Sponsor)
 fhm500.nl##.powered_by_page
 fhm500.nl##.powered_by_profile
 letsgodigital.org##.product__wrapper:has(.adsbygoogle)
-dtvnieuws.nl,omroephorstaandemaas.nl,omroepvenlo.nl,roulettefm.nl,rtvstichtsevecht.nl,wos.nl##.prom
 koopplein.nl##.promobloc-desktop
 koopplein.nl##.promoblocs__banner
 synoniemen.net##.promoblok
