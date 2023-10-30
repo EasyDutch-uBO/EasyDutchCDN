@@ -34,7 +34,7 @@ jobs:
       - name: Copy shell script from EasyDutch-uBO/EasyDutch
         run: |
           TMPDIR=$(mktemp -d)
-          git clone --depth=1 --single-branch --branch=main https://github.com/EasyDutch-uBO/EasyDutch.git $TMPDIR
+          git clone --depth=1 --single-branch --branch=master https://github.com/uBlockOrigin/uAssets.git $TMPDIR
           cp -v $TMPDIR/tools/make-diffpatch.sh .
           cp -v $TMPDIR/tools/update-diffpatches.sh .
       - name: Copy EasyDutch filters to EasyDutchCDN
@@ -46,11 +46,9 @@ jobs:
           cp $TMPFILE/EasyDutch.all.txt EasyDutch.all.txt
       - name: Create new patch
         run: |
-          # git update-index --chmod=+x ./make-diffpatch.sh
           ./make-diffpatch.sh "${{ env.TAGNAME }}"
       - name: Update existing patch
         run: |
-          # git update-index --chmod=+x ./update-diffpatches.sh
           ./update-diffpatches.sh "${{ env.TAGNAME }}"
       - name: Commit changes (if any)
         run: |
