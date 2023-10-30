@@ -37,6 +37,8 @@ jobs:
           git clone --depth=1 --single-branch --branch=main https://github.com/EasyDutch-uBO/EasyDutch.git $TMPDIR
           cp -v $TMPDIR/tools/make-diffpatch.sh .
           cp -v $TMPDIR/tools/update-diffpatches.sh .
+          git update-index --chmod=+x ./tools/make-diffpatch.sh
+          git update-index --chmod=+x ./tools/update-diffpatches.sh
       - name: Copy EasyDutch filters to EasyDutchCDN
         run: |
           TMPFILE=$(mktemp -d)
