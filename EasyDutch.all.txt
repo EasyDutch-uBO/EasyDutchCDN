@@ -4,11 +4,14 @@
     Dutch supplement for the Easylist filters to use with uBlock Origin
     Only for ads or anti-adblock on Dutch sites!
     Does also support Afrikaans, since it is a sort of Dutch
-! Last updated: Thu, 26 Oct 2023 09:15:10 +0000
-! Expires: 3 days (update frequency)
 ! Homepage: https://github.com/EasyDutch-uBO/EasyDutch
 ! GitHub issues: https://github.com/EasyDutch-uBO/EasyDutch/issues
 ! Mailto: easydutch.adblock@gmail.com
+! Last updated: Mon, 30 Oct 2023 19:53:23 +0000
+! Expires: 7 days (update frequency)
+! Diff-Path: %diffpath%
+! Diff-Name: easydutch
+! Diff-Expires: 6 hours
 !
 
 ! *** EasyDutch:EasyDutch/Block_General.txt ***
@@ -27,8 +30,6 @@
 ! 2021-05-31
 /gaslicht/header300x20.png$image
 /gaslicht/gaslicht*$subdocument
-! https://github.com/easylist/easylistdutch/commit/4b28b8e2fb72c7008bc77fbcfd252c7835c1fcb
--Ad-360.
 ! https://github.com/Nomes77/AdBlockFilters/issues/13
 /css/branding.css$3p
 ! 2021-04-27
@@ -862,6 +863,10 @@ omroepalmere.nl/wp-content/uploads/*/vacature-noordpool$image,domain=omroepalmer
 ! Description: Filters for hiding elements on specific Dutch websites
 ! Last updated: %timestamp%
 !
+! 2024-10-30
+gpfans.com##.taboonews
+wijwedden.net##.bookies.stream-preview
+wijwedden.net##.top-bookmaker-widget
 ! 2024-10-24
 geenstijl.nl##.pgAdWrapper
 geenstijl.nl##.article-premium-promotion-block
