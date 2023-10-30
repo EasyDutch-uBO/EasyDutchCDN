@@ -46,11 +46,11 @@ jobs:
           cp $TMPFILE/EasyDutch.all.txt EasyDutch.all.txt
       - name: Create new patch
         run: |
-          git update-index --chmod=+x ./make-diffpatch.sh
+          # git update-index --chmod=+x ./make-diffpatch.sh
           ./make-diffpatch.sh "${{ env.TAGNAME }}"
       - name: Update existing patch
         run: |
-          git update-index --chmod=+x ./update-diffpatches.sh
+          # git update-index --chmod=+x ./update-diffpatches.sh
           ./update-diffpatches.sh "${{ env.TAGNAME }}"
       - name: Commit changes (if any)
         run: |
