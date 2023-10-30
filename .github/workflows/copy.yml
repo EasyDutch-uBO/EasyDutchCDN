@@ -10,6 +10,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   publish:
     name: Update EasyDutch CDN
@@ -44,13 +47,12 @@ jobs:
           cp $TMPFILE/EasyDutch/*.txt EasyDutch/
           cp $TMPFILE/EasyDutch.txt EasyDutch.txt
           cp $TMPFILE/EasyDutch.all.txt EasyDutch.all.txt
+          
       - name: Create new patch
         run: |
-          git update-index --chmod=+x $TMPDIR/tools/make-diffpatch.sh
           ./make-diffpatch.sh "${{ env.TAGNAME }}"
       - name: Update existing patch
         run: |
-          git update-index --chmod=+x $TMPDIR/tools/update-diffpatches.sh
           ./update-diffpatches.sh "${{ env.TAGNAME }}"
       - name: Commit changes (if any)
         run: |
