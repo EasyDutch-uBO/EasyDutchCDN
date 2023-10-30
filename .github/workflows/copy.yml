@@ -10,9 +10,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  contents: write
-
 jobs:
   publish:
     name: Update EasyDutch CDN
@@ -28,7 +25,7 @@ jobs:
           fi
           exit 0
       - name: Clone EasyDutchCDN
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Generate version string
         run: |
           TAGNAME=$(date -u "+%Y.%-m.%-d.")$(date -u "+%H*60+%M" | bc)
@@ -46,7 +43,11 @@ jobs:
           git clone --depth=1 --single-branch --branch=gh-pages https://github.com/EasyDutch-uBO/EasyDutch.git $TMPFILE
           cp $TMPFILE/EasyDutch/*.txt EasyDutch/
           cp $TMPFILE/EasyDutch.txt EasyDutch.txt
-          cp $TMPFILE/EasyDutch.all.txt EasyDutch.all.txt  
+          cp $TMPFILE/EasyDutch.all.txt EasyDutch.all.txt
+      - name: Change permissions
+        run: |
+          git update-index --chmod=+x ./make-diffpatch.sh
+          git update-index --chmod=+x ./update-diffpatches.sh
       - name: Create new patch
         run: |
           ./make-diffpatch.sh "${{ env.TAGNAME }}"
