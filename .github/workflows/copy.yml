@@ -31,10 +31,10 @@ jobs:
           TAGNAME=$(date -u "+%Y.%-m.%-d.")$(date -u "+%H*60+%M" | bc)
           echo "TAGNAME=$TAGNAME" >> $GITHUB_ENV
           echo "Version string is $TAGNAME"
-      - name: Copy shell script from uBlockOrigin/uAssets
+      - name: Copy shell script from EasyDutch-uBO/EasyDutch
         run: |
           TMPDIR=$(mktemp -d)
-          git clone --depth=1 --single-branch --branch=main https://github.com/EasyDutch-uBO/EasyDutchCDN.git $TMPDIR
+          git clone --depth=1 --single-branch --branch=main https://github.com/EasyDutch-uBO/EasyDutch.git $TMPDIR
           cp -v $TMPDIR/tools/make-diffpatch.sh .
           cp -v $TMPDIR/tools/update-diffpatches.sh .
       - name: Copy EasyDutch filters to EasyDutchCDN
