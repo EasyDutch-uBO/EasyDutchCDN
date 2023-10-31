@@ -1,7 +1,7 @@
 ! Title: EasyDutch
-! Last updated: Tue, 31 Oct 2023 13:35:27 +0000
+! Last updated: Tue, 31 Oct 2023 18:04:56 +0000
 ! Expires: 7 days (update frequency)
-! Diff-Path: patches/2023.10.31.843.patch
+! Diff-Path: patches/2023.10.31.1105.patch
 ! Diff-Name: easydutch
 ! Diff-Expires: 6 hours
 ! Description: |
@@ -155,10 +155,15 @@ _advertentieleaderboardhome.
 ||admin.ditjesendatjes.nl/wp-content/uploads/*-footer-DenD.png$image
 ||admin.ditjesendatjes.nl/wp-content/uploads/dirk$image
 ||admin.ditjesendatjes.nl/wp-content/uploads/Logo_Dirck$image
+||alphens.nl/resize/upload/*/*banner$image
+||alphens.nl/resize/upload/*/*Leaderbord$image
+||alphens.nl/upload/*/*banner$image
 ||cvandaag.nl/api/advertise-deliver/deliver?adtypes=banners$xhr
 ||cvandaag.nl/api/advertise-deliver/deliver?adtypes=natives,advertorials$xhr,urltransform=/api/advertise-deliver/deliver?adtypes=natives
+||hockey.be/wp-content/uploads/Banners/$images
 ||startlinken.nl/oud/images/banner-$image,1p
 ||startlinken.nl/oud/javascript/BannerRotation*$script,1p
+||uitslagen.nl/banner/img$image
 ||b-cdn.net/w_/*-banner-$image,domain=dtvnieuws.nl|omroephorstaandemaas.nl|omroepvenlo.nl|roulettefm.nl|rtvstichtsevecht.nl|wos.nl
 ||ecdn.menselijklichaam.nl/banners/$image
 /production/uploads/partners/*$image,domain=dutchitchannel.nl
@@ -194,9 +199,6 @@ omroepalmere.nl/wp-content/uploads/*/vacature-noordpool$image,domain=omroepalmer
 ||proshop.nl/Images/Topbanner$image
 ||cmtt.nl/Advertisement/$image,domain=advocatie.nl
 ||advocatie.nl/content/uploads//Mediation-Basis$image
-||alphens.nl/resize/upload/*/*banner$image
-||alphens.nl/resize/upload/*/Leaderbord$image
-||alphens.nl/upload/*/*banner$image
 ||diecourant.co.za/wp-content/uploads/*-20*-1024x*.jpg^$image
 ||diecourant.co.za/wp-content/uploads/*/*-banner
 ||pen.nl/wp-content/uploads/*/cityplaza360x96.jpg$image
@@ -663,8 +665,20 @@ cvandaag.nl##div.sponsored:has-text(Gerelateerd)
 ditjesendatjes.nl##aside h2:has-text(DenD Promoties),
 ditjesendatjes.nl##aside h2:has-text(DenD Promoties) + [class]
 ditjesendatjes.nl##h2:has-text(DenD Partners):upward(section)
+footballtransfers.com##div[id*="leaderboard-billboard"]
+footballtransfers.com##[id*="rectangle-halfpage"]:upward(1)
+hockey.nl##[class^="advertisement"]:upward(li.card)
+racesport.nl##a[class*="image-wrapper"] img[src*="racesport.nl/wp-content/uploads/"][src*="1120x250"]:upward(.tdc-row)
 tostrams.nl##[class*="banner"]
 tostrams.nl##[id*="banner"]
+truck1.be,truck1.nl,truck1-nl.be##.top-banner-container:upward(1)
+truck1.be,truck1.nl,truck1-nl.be##div.banners-container
+truck1.be,truck1.nl,truck1-nl.be###aside-banners
+wielerflits.be,wielerflits.nl###mm_hpa
+wielerflits.be,wielerflits.nl##.advertisement
+wielerflits.nl##.widget-container:has(.h3:has-text(Wielerdeals))
+wielerflits.nl##li.list-item.list-item-aside:has(.badge:has-text(Ad))
+wielerflits.nl##li.list-item.list-item-default:has(span:has-text(Ad))
 zeilwereld.nl##.adv-link:upward([id^="zeilw"])
 zeilwereld.nl##.adv-link:upward(.fl-row):has-text(/advert/i):not(:has(article))
 gpfans.com##.taboonews
@@ -706,8 +720,6 @@ citaten.net##.adsense
 citaten.net##.googleinpage
 nieuwsblad.be##.ad--cba[data-ad="cba"]:upward(.widget):has-text(partners)
 webwoordenboek.nl##.layout__main-ads
-wielerflits.be,wielerflits.nl###mm_hpa
-wielerflits.be,wielerflits.nl##.advertisement
 wegdamnieuws.nl##.fixed-ad
 gewoonvoorhem.nl##[id^="below-article-rectangle"]
 gewoonvoorhem.nl##[id$="ad-desktop"]
@@ -862,8 +874,6 @@ tameteo.nl###bannerDerPC
 tameteo.nl##.megabanner
 nuus.be##.adv-link:upward(.sidebar)
 nuus.be###masthead:style(height:90px!important;)
-truck1.be,truck1.nl,truck1-nl.be##.banners
-truck1.be,truck1.nl,truck1-nl.be##.splitter-banner
 bierdopje.com##.content-rechts-ad
 ecommercenews.nl##.ldrtop
 ecommercenews.nl##.sidebar > .widget-image-content-button:not(:has(a[href*="ecommercenews.nl"]))
@@ -965,7 +975,6 @@ ensie.nl##.bottom-banner
 ensie.nl##.top-banner:style(min-height: 0px !important)
 vastgoedjournaal.nl##[href]:has([src*="media.prdn.nl"])
 vastgoedjournaal.nl##aside:has([class]:has-text(/advert/i)):has([href]:has([src*="media.prdn.nl"]))
-footballtransfers.com##div[id*="leaderboard-billboard"]
 vtm.be##+js(rc, pui__root--no-seekbar, .pui__root--no-seekbar, stay)
 vtm.be##.pe__container__ads
 vtm.be##.pui__adinfo
