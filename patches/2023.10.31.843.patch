@@ -1,16 +1,16 @@
-diff name:easydutch lines:32 checksum:f1ed60baab
+diff name:easydutch lines:32 checksum:eda73ac98f
 d2 1
 a2 1
-! Last updated: Tue, 31 Oct 2023 18:04:56 +0000
+! Last updated: Tue, 31 Oct 2023 18:39:55 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2023.10.31.1114.patch
+! Diff-Path: patches/2023.10.31.1222.patch
 a157 3
 ||alphens.nl/resize/upload/*/*banner$image
 ||alphens.nl/resize/upload/*/*Leaderbord$image
 ||alphens.nl/upload/*/*banner$image
 a159 1
-||hockey.be/wp-content/uploads/Banners/$images
+||hockey.be/wp-content/uploads/Banners/$image
 a161 1
 ||uitslagen.nl/banner/img$image
 d197 3
