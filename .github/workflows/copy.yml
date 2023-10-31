@@ -10,9 +10,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  contents: write
-
 jobs:
   publish:
     name: Update EasyDutch CDN
@@ -58,7 +55,6 @@ jobs:
           if [[ -z $(git diff --name-only --cached) ]]; then exit 0; fi
           git config user.name "GitHub Actions"
           git config user.email "<>"
-          # git add -u EasyDutch/ EasyDutch.txt EasyDutch.all.txt
           git commit -m "Update all CDN assets to ${{ env.TAGNAME }}"
           git push origin main
           git tag ${{ env.TAGNAME }}
