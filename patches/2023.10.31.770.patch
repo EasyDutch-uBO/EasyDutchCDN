@@ -1,10 +1,10 @@
-diff name:easydutch lines:45 checksum:ff4bdc032b
+diff name:easydutch lines:45 checksum:84b11ae260
 d2 1
 a2 1
 ! Last updated: Tue, 31 Oct 2023 18:04:56 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2023.10.31.1105.patch
+! Diff-Path: patches/2023.10.31.1107.patch
 a153 7
 ||admin.ditjesendatjes.nl/wp-content/uploads/Vignet_Cover$image
 ||admin.ditjesendatjes.nl/wp-content/uploads/*-footer-DenD.png$image
