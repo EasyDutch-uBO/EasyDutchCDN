@@ -31,7 +31,7 @@ jobs:
           TAGNAME=$(date -u "+%Y.%-m.%-d.")$(date -u "+%H*60+%M" | bc)
           echo "TAGNAME=$TAGNAME" >> $GITHUB_ENV
           echo "Version string is $TAGNAME"
-      - name: Copy shell script from uAssets
+      - name: Copy shell script from EasyDutch-uBO/EasyDutch
         run: |
           TMPDIR=$(mktemp -d)
           git clone --depth=1 --single-branch --branch=master https://github.com/uBlockOrigin/uAssets.git $TMPDIR
@@ -55,6 +55,7 @@ jobs:
           if [[ -z $(git diff --name-only --cached) ]]; then exit 0; fi
           git config user.name "GitHub Actions"
           git config user.email "<>"
+          git add -u EasyDutch/ EasyDutch.txt EasyDutch.all.txt
           git commit -m "Update all CDN assets to ${{ env.TAGNAME }}"
           git push origin main
           git tag ${{ env.TAGNAME }}
