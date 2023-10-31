@@ -1,0 +1,23 @@
+diff name:easydutch lines:22 checksum:a03410913d
+d2 1
+a2 1
+! Last updated: Tue, 31 Oct 2023 13:35:27 +0000
+d4 1
+a4 1
+! Diff-Path: patches/2023.10.31.843.patch
+a153 4
+||admin.ditjesendatjes.nl/wp-content/uploads/Vignet_Cover$image
+||admin.ditjesendatjes.nl/wp-content/uploads/*-footer-DenD.png$image
+||admin.ditjesendatjes.nl/wp-content/uploads/dirk$image
+||admin.ditjesendatjes.nl/wp-content/uploads/Logo_Dirck$image
+d205 5
+d372 1
+a664 3
+ditjesendatjes.nl##aside h2:has-text(DenD Promoties),
+ditjesendatjes.nl##aside h2:has-text(DenD Promoties) + [class]
+ditjesendatjes.nl##h2:has-text(DenD Partners):upward(section)
+a666 2
+zeilwereld.nl##.adv-link:upward([id^="zeilw"])
+zeilwereld.nl##.adv-link:upward(.fl-row):has-text(/advert/i):not(:has(article))
+d792 1
+d833 2
