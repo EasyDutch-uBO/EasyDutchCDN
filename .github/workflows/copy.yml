@@ -26,17 +26,6 @@ jobs:
           exit 0
       - name: Clone EasyDutchCDN
         uses: actions/checkout@v3
-      - name: Generate version string
-        run: |
-          TAGNAME=$(date -u "+%Y.%-m.%-d.")$(date -u "+%H*60+%M" | bc)
-          echo "TAGNAME=$TAGNAME" >> $GITHUB_ENV
-          echo "Version string is $TAGNAME"
-      - name: Copy shell script from EasyDutch-uBO/EasyDutch
-        run: |
-          TMPDIR=$(mktemp -d)
-          git clone --depth=1 --single-branch --branch=main https://github.com/EasyDutch-uBO/EasyDutch.git $TMPDIR
-          cp -v $TMPDIR/tools/make-diffpatch.sh .
-          cp -v $TMPDIR/tools/update-diffpatches.sh .
       - name: Copy EasyDutch filters to EasyDutchCDN
         run: |
           TMPFILE=$(mktemp -d)
@@ -44,20 +33,12 @@ jobs:
           cp $TMPFILE/EasyDutch/*.txt EasyDutch/
           cp $TMPFILE/EasyDutch.txt EasyDutch.txt
           cp $TMPFILE/EasyDutch.all.txt EasyDutch.all.txt
-      - name: Create new patch
-        run: |
-          chmod 755 ./make-diffpatch.sh
-          ./make-diffpatch.sh "${{ env.TAGNAME }}"
-      - name: Update existing patch
-        run: |
-          chmod 755 ./update-diffpatches.sh
-          ./update-diffpatches.sh "${{ env.TAGNAME }}"
       - name: Commit changes (if any)
         run: |
-          if [[ -z $(git diff --name-only --cached) ]]; then exit 0; fi
-          git config user.name "GitHub Actions"
-          git config user.email "<>"
-          git commit -m "Update all CDN assets to ${{ env.TAGNAME }}"
-          git push origin main
-          git tag ${{ env.TAGNAME }}
-          git push origin ${{ env.TAGNAME }}
+          if [[ -n $(git diff) ]]; then
+            git config user.name "GitHub Actions"
+            git config user.email "<>"
+            git add -u EasyDutch/ EasyDutch.txt EasyDutch.all.txt
+            git commit -m "Update all CDN assets"
+            git push origin main
+          fi
