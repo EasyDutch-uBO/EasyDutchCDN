@@ -1,10 +1,10 @@
-diff name:easydutch lines:32 checksum:6870320256
+diff name:easydutch lines:32 checksum:6e44b0d7a4
 d2 1
 a2 1
 ! Last updated: Tue, 31 Oct 2023 18:39:55 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2023.10.31.1345.patch
+! Diff-Path: patches/2023.11.1.92.patch
 a157 3
 ||alphens.nl/resize/upload/*/*banner$image
 ||alphens.nl/resize/upload/*/*Leaderbord$image
